@@ -39,6 +39,6 @@ post '/movies/:id' do
   redirect '/'
 end
 
-get '/movies/:id/review/' do
+get '/movies/:id/review' do
   "hello world"
 end
