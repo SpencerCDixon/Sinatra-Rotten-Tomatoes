@@ -16,3 +16,18 @@
 <%= erb :form_layout %>
 
 <h1> All Reviews: </h1>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Review </th>
+    <th>Time Written </th>
+  </tr>
+<% @reviews.each do |review| %>
+  <% if review[:id] == params[:id] %>
+    <tr>
+      <td><a href="/movies/<%= params[:id] %>/review"> <%= review[:name] %> </a></td>
+      <td> <%= review[:review] %> </td>
+      <td> <%= review[:time] %> </td>
+    </tr>
+  <% end %>
+<% end %>
