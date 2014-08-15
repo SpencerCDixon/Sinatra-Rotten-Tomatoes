@@ -25,7 +25,7 @@
 <% @reviews.each do |review| %>
   <% if review[:id] == params[:id] %>
     <tr>
-      <td><a href="/movies/<%= params[:id] %>/review"> <%= review[:name] %> </a></td>
+      <td><a href="/movies/<%= params[:id] %>/review/<%= review[:review_id] %>"> <%= review[:name] %> </a></td>
       <td> <%= review[:review] %> </td>
       <td> <%= review[:time] %> </td>
     </tr>
