@@ -1,0 +1,22 @@
+<div class="row">
+
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>Title</th>
+        <th>Release Date </th>
+        <th>Year </th>
+        <th>Rating </th>
+      </tr>
+      <% @movies.each do |movie| %>
+      <tr>
+        <td><a href="/movies/<%= movie["id"]%>"> <%= movie["title"] %></a> </td>
+        <td> <%= movie["release_dates"]["theater"] %> </td>
+        <td> <%= movie["year"] %> </td>
+        <td> <%= movie["mpaa_rating"] %> </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+
+</div>

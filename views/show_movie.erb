@@ -1,0 +1,18 @@
+<h1 style="margin-bottom: 40px;"> <%= @single_movie["title"] %> </h1>
+<div style="margin-top: 20px;"></div>
+<div class="row" style="margin-bottom: 40px;">
+  <div class="col-md-3">
+    <img src="<%= @single_movie["posters"]["detailed"] %>">
+  </div>
+  <div class="col-md-9">
+    <h3> Synopsis </h3>
+    <p> <%= @single_movie["synopsis"] %> </p>
+  </div>
+</div>
+<h3> Critic Consensus </h3>
+<p> <%= @single_movie["critics_consensus"] %> </p>
+
+<h3> Write A Review </h3>
+<%= erb :form_layout %>
+
+<h1> All Reviews: </h1>
