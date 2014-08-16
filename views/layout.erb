@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <div class="container">
+  <% if @flash %>
+    <div class="alert alert-success" role="alert"><%= @flash %></div>
+  <% end %>
 
   <header>
     <%= erb :nav %>
