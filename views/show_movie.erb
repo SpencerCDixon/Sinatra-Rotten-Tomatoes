@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../styles.css/">
+
 <h1 style="margin-bottom: 40px;"> <%= @movie["title"] %> </h1>
 <div style="margin-top: 20px;"></div>
 <div class="row" style="margin-bottom: 40px;">
@@ -9,8 +11,31 @@
     <p> <%= @movie["synopsis"] %> </p>
   </div>
 </div>
+<button type="button" class="btn btn-info">Actors</button>
+<div class="row">
+<div class="col-md-6 col-md-offset-2">
+  <table id="info" class="table">
+    <tr>
+      <th>Name</th>
+      <th>Characters </th>
+    </tr>
+
+    <% @movie["abridged_cast"].each do |cast| %>
+    <tr>
+      <td><%= cast["name"] %></td>
+      <td><%= cast["characters"].join('') %></td>
+    </tr>
+    <% end %>
+
+  </table>
+</div>
+</div>
+
+
+
 <h3> Critic Consensus </h3>
 <p> <%= @movie["critics_consensus"] %> </p>
+
 
 <h3> Write A Review </h3>
 <%= erb :form_layout %>
@@ -31,3 +56,6 @@
     </tr>
   <% end %>
 <% end %>
+
+<script src="../jquery-2.1.1.js/"></script>
+<script src="../scripts.js/"></script>

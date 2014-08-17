@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
-<div class="container">
-  <% if @flash %>
-    <div class="alert alert-success" role="alert"><%= @flash %></div>
-  <% end %>
+  <div class="container">
 
-  <header>
-    <%= erb :nav %>
-  </header>
+    <header>
+      <%= erb :nav %>
+    </header>
 
-  <section>
-    <%= yield %>
-  </section>
+    <section>
+      <%= yield %>
+    </section>
 
-</div>
+  </div>
+
 </body>
 </html>
