@@ -13,7 +13,7 @@
 </div>
 <button type="button" class="btn btn-info">Actors</button>
 <div class="row">
-<div class="col-md-6 col-md-offset-2">
+<div class="col-md-10 col-md-offset-2">
   <table id="info" class="table">
     <tr>
       <th>Name</th>
@@ -22,7 +22,7 @@
 
     <% @movie["abridged_cast"].each do |cast| %>
     <tr>
-      <td><%= cast["name"] %></td>
+      <td width=200><%= cast["name"] %></td>
       <td><%= cast["characters"].join('') %></td>
     </tr>
     <% end %>
